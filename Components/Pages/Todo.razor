@@ -1,0 +1,149 @@
+@page "/todo"
+@rendermode InteractiveServer
+
+<PageTitle>To-Do</PageTitle>
+<h1>To-do</h1>
+@* <input @bind="message">
+<button @onclick="()=>message=string.Empty">Clear</button>
+<p>@message</p>
+<input @bind="text">
+<p>@text</p>
+<button @onclick="Clearme">Clear</button>
+
+@code
+{
+    string text="";
+    string message="";
+   void Clearme()
+   {
+    text=string.Empty;
+   }
+
+
+}    *@
+
+<style>
+    .main
+    {
+        margin-top: 2vh;;
+        border:1px solid black;
+        background-color:bisque;
+        width:60vw;
+        height:5vh;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .edit
+    {
+        background-color:blue;
+        border-radius: 20px;
+    }
+    .put{
+        width:10vw;
+        height:5vh;
+    }
+    .edit:active{
+        background-color: greenyellow;
+    }
+
+    .fList {
+        list-style-type: none;
+        display:flex;
+        justify-content: space-evenly;
+
+    }
+    @* .Clear
+    {
+visibility: hidden;
+    } *@
+    .todolist
+    {
+
+    }
+    @* .edit:active{
+        background-color: bisque;
+    }
+    .edit:active+.Clear{
+       visibility: visible;
+    }    *@
+</style>
+
+<h1>Counter:(@Todoitem.Count(todo=>!todo.IsDone))</h1>
+<input @bind="name" placeholder="Enter the task">
+
+<button @onclick="Listing">Enter</button>
+<button @onclick="Clear">Clear</button>
+@foreach (var todo in Todoitem)
+{
+<div class="main">
+    <ul class="fList">
+        <li><input type="checkbox" @bind="todo.IsDone" ></li>
+ @if(todo.IsEdit==true)
+ {
+<input type="text" @bind="todo.Name" class="put">
+
+ }else{
+    <li>
+    @if(todo.IsDone==false){
+        <span>@todo.Name</span>
+        }else{
+             <strike>@todo.Name</strike>
+        }
+        </li>
+
+}
+
+        <button class="edit" @onclick="()=>ToggleEdit(todo)">@if(todo.IsEdit==false&&!todo.IsDone){
+            <span>EDIT</span>}
+                   else if(todo.IsDone)
+        {
+        <span @onclick="()=>RemoveTodo(todo)" class="Clear">Clear</span>
+        } else{
+              <span>SAVE</span>
+        }
+
+        </button> 
+    </ul>
+</div>
+}
+
+
+
+@code
+{
+    int counter;
+    int roll = 0;
+    string name = "";
+    @* string Name="";
+    List <string> Namelist=new List<string>();
+        void Listing()
+        {
+            Namelist.Add(Name);
+        } *@
+    public List<Todolist> Todoitem = new List<Todolist>();
+
+    void Listing()
+    {
+        if (name != "")
+        {
+            Todoitem.Add(new Todolist(name));
+        }
+    }
+    void Clear()
+    {
+        name = string.Empty;
+        roll = 0;
+    }
+    public void RemoveTodo(Todolist todo)
+    {
+        Todoitem.Remove(todo);
+    }
+    void ToggleEdit(Todolist todo)
+    {
+     todo.IsEdit= !todo.IsEdit;
+    }
+    @* public void saving(TodoList todo)
+    {
+     todo.Name=name;
+        
+    } *@
+}

@@ -1,0 +1,37 @@
+@page "/Fruits"
+@rendermode InteractiveServer
+
+<PageTitle>Fruits🍉</PageTitle>
+
+<h1>FRUITS</h1>
+
+@if(currentCount<fruits.Length)
+{<div style="background-color:yellow;color:red;border:2px solid black;height:30px; width:200px;margin: bottom 20px;;">
+<p role="status">@currentCount: Current fruit:@fruits[currentCount]</p>
+</div>
+}
+else
+{
+    <h1>not many fruits</h1>
+}
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+
+@foreach(var fruit in fruits)
+{  <ul>
+    <li>@fruit</li>
+    </ul>
+    
+}
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+    string[] fruits={"orange","apple","mango","banana","peach"};
+
+}
+
+  
