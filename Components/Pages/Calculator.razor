@@ -1,221 +1,82 @@
 @page "/calculator"
 @rendermode InteractiveServer
-<style>
-    
-    *{
-      margin: 0;
-      padding:0;
-      box-sizing: border-box;
-    }
-    .badabox{
-        background-color:burlywood;
-        width:50vw;
-        height:105vh;
-        border:2px solid black;
-        @* display:grid;
-        grid-template-columns: auto auto auto; *@
-        @* gap:20px *@
-        margin:auto;
-    }
-  
-    .upbox{
-        width:50vw;
-        height:10vw;
-        border:2px solid blue;
-        margin:25px auto;
-    }
-    .underbox
-    {display:grid;
-    font-size: 2rem;
-    font-weight: 700;
-    grid-template-columns: auto auto auto auto auto; 
-    column-gap:2vw;
-    row-gap:normal;
-    border-radius:15px;
-    border:2px solid black;
-    
-    }
-    .number1
-    {
-        border:1px solid black;
-        height: 7vw;
-        width: 7vw;
-        margin: 20px auto ;
-       text-align: center;
-       border-radius: 45px;
-       padding:1.7vw
-      
-       
-    }
-       .number2
-    {
-        border:1px solid black;
-         height:7vw;
-        width: 7vw;
-        margin:20px auto;
-        text-align: center;
-         border-radius: 45px;
-       padding:1.7vw
-    }
-       .number3
-    {
-        border:1px solid black;
-         height:7vw;
-        width: 7vw;
-        margin:20px auto;
-        text-align: center;
-         border-radius: 45px;
-       padding:1.7vw
-    }
-       .number4
-    {
-        border:1px solid black;
-         height:7vw;
-        width: 7vw;
-        margin:20px auto;
-        text-align: center;
-         border-radius: 45px;
-       padding:1.7vw
-    }
-       .number5
-    {
-        border:1px solid black;
-         height:7vw;
-        width: 7vw;
-        margin:20px auto;
-        text-align: center;
-         border-radius: 45px;
-       padding:1.7vw
-    }
-        .number6
-    {
-        border:1px solid black;
-         height:7vw;
-        width: 7vw;
-        margin:20px auto;
-        text-align: center;
-         border-radius: 45px;
-       padding:1.7vw
-    }
-        .number7
-    {
-        border:1px solid black;
-         height:7vw;
-        width: 7vw;
-        margin:20px auto;
-        text-align: center;
-         border-radius: 45px;
-       padding:1.7vw
-    }
-        .number8
-    {
-        border:1px solid black;
-         height:7vw;
-        width: 7vw;
-        margin:20px auto;
-        text-align: center;
-         border-radius: 45px;
-       padding:1.7vw
-    }
-        .number9
-    {
-        border:1px solid black;
-         height:7vw;
-        width: 7vw;
-        margin:20px auto;
-        text-align: center;
-         border-radius: 45px;
-       padding:1.7vw
-    }
-        .number10
-    {
-        border:1px solid black;
-         height:7vw;
-        width: 7vw;
-        margin:20px auto;
-        text-align: center;
-         border-radius: 45px;
-       padding:1.7vw
-    }
-        .number11
-    {
-        border:1px solid black;
-         height:7vw;
-        width: 7vw;
-        margin:20px auto;
-        text-align: center;
-         border-radius: 45px;
-       padding:1.7vw
-    }
-        .number12
-    {
-        border:1px solid black;
-         height:7vw;
-        width: 7vw;
-        margin:20px auto;
-        text-align: center;
-         border-radius: 45px;
-       padding:1.7vw
-    }
-        .number13
-    {
-        border:1px solid black;
-         height:7vw;
-        width: 7vw;
-        margin:20px auto;
-        text-align: center;
-         border-radius: 45px;
-       padding:1.7vw
-    }
-        .number14
-    {
-        border:1px solid black;
-         height:7vw;
-        width: 7vw;
-        margin:20px auto;
-        text-align: center;
-         border-radius: 45px;
-       padding:1.7vw
-    }
-        .number15
-    {
-        border:1px solid black;
-         height:7vw;
-        width: 7vw;
-        margin:20px auto;
-        text-align: center;
-         border-radius: 45px;
-       padding:1.7vw
-    }
-        .number16
-    {
-        border:1px solid black;
-         height:7vw;
-        width: 7vw;
-        margin:20px auto;
-        text-align: center;
-         border-radius: 45px;
-       padding:1.7vw
-    }
-</style>
 <div class="badabox">
-    <div class="upbox"></div>
+    <div class="upbox">
+        <span>@span1</span>
+        <span>@span2</span>
+        <span>@span3</span>
+        @* <span>@span3</span>
+        <span>@span4</span>
+        <span>@span5</span>
+        <span>@span6</span>
+           <span>@span7</span> *@
+    </div>
     <div class="underbox">
-    <div class="number1">7</div>
-    <div class="number2">8</div>
-    <div class="number3">9</div>
-     <div class="number4">MOD</div>
-      <div class="number5">AC</div>
-       <div class="number6">4</div>
-        <div class="number7">5</div>
-        <div class="number8">6</div>
-        <div class="number9">*</div>
-        <div class="number10">/</div>
-        <div class="number11">1</div>
-        <div class="number12">2</div>
-        <div class="number13">3</div>
-        <div class="number14">+</div>
-        <div class="number15">-</div>
-        <div class="number16">0</div>
+        <div class="number"><button @onclick="()=>enterint(var1)">@var1</button></div>
+        <div class="number"><button @onclick="()=>enterint(var2)">@var2</button></div>
+        <div class="number"><button @onclick="()=>enterint(var3)">@var3</button></div>
+        <div class="number"><button @onclick="()=>enterint(var4)">@var4</button></div>
+        <div class="number"><button @onclick="()=>enterstring(var5)" >@var5</button></div>
+        <div class="number"><button @onclick="()=>enterint(var6)">@var6</button></div>
+        <div class="number"><button @onclick="()=>enterint(var7)">@var7</button></div>
+        <div class="number"><button @onclick="()=>enterint(var8)">@var8</button></div>
+        <div class="number"><button @onclick="()=>enterstring(var9)">@var9</button></div>
+        <div class="number"><button @onclick="()=>enterstring(var10)">@var10</button></div>
+        <div class="number"><button @onclick="()=>enterint(var11)">@var11</button></div>
+        <div class="number"><button @onclick="()=>enterint(var12)">@var12</button></div>
+        <div class="number"><button @onclick="()=>enterint(var13)">@var13</button></div>
+        <div class="number"><button @onclick="()=>enterstring(var14)">@var14</button></div>
+        <div class="number"><button @onclick="()=>enterstring(var15)">@var15</button></div>
+        <div class="number"><button @onclick="()=>enterint(var16)">@var16</button></div>
+           <div class="number"><button @onclick="()=>enterstring(var17)">@var17</button></div>
     </div>
-    </div>
+</div>
+@code
+{
+  public List<Number> numbers=new List<Number>();
+    private string span1="0";
+     private string span3="";
+
+            private string span2="";
+          
+    private decimal var1 = 7;
+    private decimal var2=8;
+     private decimal var3 = 9;
+      private decimal var4= 8; 
+      private string var5 = "AC";
+       private decimal var6 = 4;
+        private decimal var7 = 5;
+         private decimal var8 = 6; 
+         private string var9 = "*";
+      private string var10 = "/";
+       private decimal var11 = 1;
+        private decimal var12=2;
+         private decimal var13 = 3;
+          private string var14 ="+";
+           private string var15 = "-";
+            private decimal var16 = 0;
+            private string var17="ANS";
+public void enterint(decimal i)
+{
+if(span2=="")
+{
+span1=(Convert.ToDecimal(span1)*10+i).ToString();
+}
+ else if(span2!="")
+{
+    if(span3=="")
+    {
+        span3="0";
+    }
+    span3=(Convert.ToDecimal(span3)*10+i).ToString();
+}
+}
+
+
+public void enterstring(string i)
+{
+span2=i;
+
+}
+} 
+    
