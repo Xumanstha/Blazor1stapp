@@ -77,5 +77,5 @@ C:\Users\User\Desktop\Blazor\Blazor1\obj\Debug\net9.0\Blazor1.genruntimeconfig.c
 C:\Users\User\Desktop\Blazor\Blazor1\obj\Debug\net9.0\ref\Blazor1.dll
 C:\Users\User\Desktop\Blazor\Blazor1\obj\Debug\net9.0\Blazor1.sourcelink.json
 C:\Users\User\Desktop\Blazor\Blazor1\obj\Debug\net9.0\scopedcss\Components\Pages\Calculator.razor.rz.scp.css
-C:\Users\User\Desktop\Blazor\Blazor1\obj\Debug\net9.0\compressed\d3z0bcwxcf-e9jrnde0aq.gz
-C:\Users\User\Desktop\Blazor\Blazor1\obj\Debug\net9.0\compressed\oyyayxw3re-e9jrnde0aq.gz
+C:\Users\User\Desktop\Blazor\Blazor1\obj\Debug\net9.0\compressed\d3z0bcwxcf-8w5q3bt3bp.gz
+C:\Users\User\Desktop\Blazor\Blazor1\obj\Debug\net9.0\compressed\oyyayxw3re-8w5q3bt3bp.gz

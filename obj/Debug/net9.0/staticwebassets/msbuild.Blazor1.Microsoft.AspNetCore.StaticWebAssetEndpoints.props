@@ -12,17 +12,17 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"khy4lop6wu"},{"Name":"integrity","Value":"sha256-aNPcLFwdCCGS2v1guSR64Htd4Ly5uclT7taAptnMPbs="},{"Name":"label","Value":"_content/Blazor1/app.css"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2900"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022aNPcLFwdCCGS2v1guSR64Htd4Ly5uclT7taAptnMPbs=\u0022"},{"Name":"Last-Modified","Value":"Tue, 10 Dec 2024 06:58:47 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Blazor1/Blazor1.bundle.scp.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Blazor1.e9jrnde0aq.bundle.scp.css'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/Blazor1/Blazor1.8w5q3bt3bp.bundle.scp.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Blazor1.8w5q3bt3bp.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-vrofG1ioCRSQN4D2qqrsDTrjCLJYE6kPQ\u002BdEALWCgVo="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"7299"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022vrofG1ioCRSQN4D2qqrsDTrjCLJYE6kPQ\u002BdEALWCgVo=\u0022"},{"Name":"Last-Modified","Value":"Thu, 02 Jan 2025 07:31:13 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"8w5q3bt3bp"},{"Name":"integrity","Value":"sha256-WB/z1slCIgNA/0uosWuIPIOx4bVZTpRaWQbwtHWHwSk="},{"Name":"label","Value":"_content/Blazor1/Blazor1.bundle.scp.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"7618"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022WB/z1slCIgNA/0uosWuIPIOx4bVZTpRaWQbwtHWHwSk=\u0022"},{"Name":"Last-Modified","Value":"Tue, 07 Jan 2025 15:56:46 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Blazor1/Blazor1.e9jrnde0aq.bundle.scp.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Blazor1.e9jrnde0aq.bundle.scp.css'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/Blazor1/Blazor1.bundle.scp.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Blazor1.8w5q3bt3bp.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"e9jrnde0aq"},{"Name":"integrity","Value":"sha256-vrofG1ioCRSQN4D2qqrsDTrjCLJYE6kPQ\u002BdEALWCgVo="},{"Name":"label","Value":"_content/Blazor1/Blazor1.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"7299"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022vrofG1ioCRSQN4D2qqrsDTrjCLJYE6kPQ\u002BdEALWCgVo=\u0022"},{"Name":"Last-Modified","Value":"Thu, 02 Jan 2025 07:31:13 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-WB/z1slCIgNA/0uosWuIPIOx4bVZTpRaWQbwtHWHwSk="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"7618"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022WB/z1slCIgNA/0uosWuIPIOx4bVZTpRaWQbwtHWHwSk=\u0022"},{"Name":"Last-Modified","Value":"Tue, 07 Jan 2025 15:56:46 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Blazor1/favicon.ifv42okdf2.png">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.png'))</AssetFile>

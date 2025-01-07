@@ -2,9 +2,14 @@
 @rendermode InteractiveServer
 <div class="badabox">
     <div class="upbox">
-        <span>@span1</span>
-        <span>@span2</span>
-        <span>@span3</span>
+        <div class="upbox1">
+            <span>@span1</span>
+            <span>@span2</span>
+            <span>@span3</span>
+        </div>
+        <div class="upbox2">
+            <span>@answer</span>
+        </div>
         @* <span>@span3</span>
         <span>@span4</span>
         <span>@span5</span>
@@ -15,8 +20,8 @@
         <div class="number"><button @onclick="()=>enterint(var1)">@var1</button></div>
         <div class="number"><button @onclick="()=>enterint(var2)">@var2</button></div>
         <div class="number"><button @onclick="()=>enterint(var3)">@var3</button></div>
-        <div class="number"><button @onclick="()=>enterint(var4)">@var4</button></div>
-        <div class="number"><button @onclick="()=>enterstring(var5)" >@var5</button></div>
+        <div class="number"><button @onclick="()=>enterstring(var4)">@var4</button></div>
+        <div class="number"><button @onclick="()=>enterstring(var5)">@var5</button></div>
         <div class="number"><button @onclick="()=>enterint(var6)">@var6</button></div>
         <div class="number"><button @onclick="()=>enterint(var7)">@var7</button></div>
         <div class="number"><button @onclick="()=>enterint(var8)">@var8</button></div>
@@ -28,55 +33,134 @@
         <div class="number"><button @onclick="()=>enterstring(var14)">@var14</button></div>
         <div class="number"><button @onclick="()=>enterstring(var15)">@var15</button></div>
         <div class="number"><button @onclick="()=>enterint(var16)">@var16</button></div>
-           <div class="number"><button @onclick="()=>enterstring(var17)">@var17</button></div>
+        <div class="number"><button @onclick="()=>enterstring(var17)">@var17</button></div>
     </div>
 </div>
 @code
 {
-  public List<Number> numbers=new List<Number>();
-    private string span1="0";
-     private string span3="";
+    public List<Number> numbers = new List<Number>();
+    private string span1 = "0";
+    private string span3 = "";
 
-            private string span2="";
-          
+    private string span2 = "";
+    private string answer = "";
+
     private decimal var1 = 7;
-    private decimal var2=8;
-     private decimal var3 = 9;
-      private decimal var4= 8; 
-      private string var5 = "AC";
-       private decimal var6 = 4;
-        private decimal var7 = 5;
-         private decimal var8 = 6; 
-         private string var9 = "*";
-      private string var10 = "/";
-       private decimal var11 = 1;
-        private decimal var12=2;
-         private decimal var13 = 3;
-          private string var14 ="+";
-           private string var15 = "-";
-            private decimal var16 = 0;
-            private string var17="ANS";
-public void enterint(decimal i)
-{
-if(span2=="")
-{
-span1=(Convert.ToDecimal(span1)*10+i).ToString();
-}
- else if(span2!="")
-{
-    if(span3=="")
+    private decimal var2 = 8;
+    private decimal var3 = 9;
+    private string var4 = "MOD";
+    private string var5 = "AC";
+    private decimal var6 = 4;
+    private decimal var7 = 5;
+    private decimal var8 = 6;
+    private string var9 = "*";
+    private string var10 = "/";
+    private decimal var11 = 1;
+    private decimal var12 = 2;
+    private decimal var13 = 3;
+    private string var14 = "+";
+    private string var15 = "-";
+    private decimal var16 = 0;
+    private string var17 = "ANS";
+    public void enterint(decimal i)
     {
-        span3="0";
+        @* if (answer == "")
+        { *@
+            if (span2 == "")
+            {
+                span1 = (Convert.ToDecimal(span1) * 10 + i).ToString();
+            }
+            else if (span2 != "")
+            {
+                if (span3 == "")
+                {
+                    span3 = "0";
+                }
+                span3 = (Convert.ToDecimal(span3) * 10 + i).ToString();
+            }
+        @* } *@
+       
+        
+            @* OnlyClear();
+            if (span2 == "" && span1 == "0")
+            {
+                span1 = answer;
+            }
+            else if (span2 == "")
+            {
+                span1 = (Convert.ToDecimal(span1) * 10 + i).ToString();
+            }
+            else if (span2 != "")
+            {
+                if (span3 == "")
+                {
+                    span3 = "0";
+                }
+                span3 = (Convert.ToDecimal(span3) * 10 + i).ToString();
+            } *@
+        
     }
-    span3=(Convert.ToDecimal(span3)*10+i).ToString();
-}
-}
+    public void OnlyClear()
+    {
+        span1 = "0";
+        span3 = "";
+        span2 = "";
+    }
+    public void AllClear()
+    {
+
+        span1 = "0";
+        span3 = "";
+        span2 = "";
+        answer = "";
+    }
+    public void Answer()
+    {
+        switch (span2)
+        {
+            case "+":
+                {
+                    answer = (Convert.ToDecimal(span1) + Convert.ToDecimal(span3)).ToString();
+                    break;
+                }
+            case "-":
+                {
+                    answer = (Convert.ToDecimal(span1) - Convert.ToDecimal(span3)).ToString();
+                    break;
+                }
+            case "*":
+                {
+                    answer = (Convert.ToDecimal(span1) * Convert.ToDecimal(span3)).ToString();
+                    break;
+                }
+            case "/":
+                {
+                    answer = (Convert.ToDecimal(span1) / Convert.ToDecimal(span3)).ToString();
+                    break;
+                }
+            case "MOD":
+                {
+                    answer = (Convert.ToDecimal(span1) % Convert.ToDecimal(span3)).ToString();
+                    break;
+                }
+        }
+    }
+
+    public void enterstring(string i)
+    {
+        if (i == "AC")
+        {
+            AllClear();
+        }
+        else if (i == "ANS")
+        {
+            Answer();
+        }
+        else
+        {
+            span2 = i;
+        }
 
 
-public void enterstring(string i)
-{
-span2=i;
-
+    }
 }
-} 
-    
